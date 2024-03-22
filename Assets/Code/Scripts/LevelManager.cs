@@ -11,12 +11,38 @@ public class LevelManager : MonoBehaviour
     public Transform[] path;
 
     public int lives;
+    public int currency = 500;
+
+
 
     private void Awake()
     {
         main = this;
     }
 
+    private void Start()
+    {
+        currency = 500;
+    }
+
+    public void IncreaseCurrency(int amount)
+    {
+        currency += amount;
+    }
+
+    public bool SpendCurrency(int amount)
+    {
+        if (amount <= currency)
+        {
+            currency -= amount;
+            return true;
+        }
+        else
+        {
+            Debug.Log("You don't have enough currency to purchase this item.");
+            return false;
+        }
+    }
     private void Update()
     {
         if (lives <= 0)
