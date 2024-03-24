@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         baseSpeed = moveSpeed;
-        target = LevelManager.main.path[pathIndex];    
+        target = LevelManager.main.path[pathIndex];
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         {
             pathIndex++;
 
-            if(pathIndex >= LevelManager.main.path.Length)
+            if (pathIndex >= LevelManager.main.path.Length)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
-    
+
     private void FixedUpdate()
     {
         Vector2 direction = (target.position - transform.position).normalized;

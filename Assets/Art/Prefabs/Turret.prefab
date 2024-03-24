@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7018aea40bc125f4cb86144b9cba708e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouse_over: 0
 --- !u!1 &2245145847938955023
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,17 +272,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7048ee113633a604d994151607e19878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeUI: {fileID: 1564909400711866460}
+  upgradeButton: {fileID: 8371161221623782700}
+  targetingRange: 3
+  rotationSpeed: 150
+  bps: 1
+  baseUpgradeCost: 100
+  sps: 4
+  freezeTime: 1
   turretRotationPoint: {fileID: 4059637210495739508}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   bulletPrefab: {fileID: 3419019377799780062, guid: 3cacd4b787bbf5b4c800887f4a669be9, type: 3}
   firingPoint: {fileID: 8036557803152112943}
-  upgradeUI: {fileID: 1564909400711866460}
-  upgradeButton: {fileID: 8371161221623782700}
-  targetingRange: 3
-  rotationSpeed: 150
-  bps: 1
 --- !u!1 &3178022808699041562
 GameObject:
   m_ObjectHideFlags: 0
